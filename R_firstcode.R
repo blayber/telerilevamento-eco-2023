@@ -2,4 +2,4 @@
 # let's install the raster package
 instal. packages ("raster")
 
-library                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+library(raster)                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
