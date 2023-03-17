@@ -61,3 +61,35 @@ plot(l2011[[1]], col=clb)
 clr  <- colorRampPalette(c("darkorchid", "darkorchid1", "darkorchid2"))(100)
 plot(l2011[[1]], col=clr)
 
+# RGB plotting 
+plotRGB(l2011, r=3, g=2, b=1, stretch="Lin")
+
+plotRGB(l2011, r=4, g=3, b=2, stretch="Lin")
+
+
+plotRGB(l2011, r=3, g=4, b=2, stretch="Lin")
+
+plotRGB(l2011, r=3, g=2, b=4, stretch="Lin")
+
+# multiframe with natural and false colours
+
+par(mfrow=c(2,1))
+plotRGB(l2011, r=3, g=2, b=1, stretch="Lin")
+plotRGB(l2011, r=4, g=3, b=2, stretch="Lin")
+
+# histogram stretching
+par(mfrow=c(2,1))
+plotRGB(l2011, r=3, g=2, b=1, stretch="hist")
+plotRGB(l2011, r=4, g=3, b=2, stretch="hist")
+
+
+# histogram stretching
+par(mfrow=c(2,1))
+plotRGB(l2011, r=3, g=2, b=2, stretch="Lin")
+plotRGB(l2011, r=4, g=3, b=2, stretch="hist")
+
+
+
+
+
+
