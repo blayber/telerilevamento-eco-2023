@@ -6,8 +6,8 @@ library(raster)
 
 # setwd("c:/lab/") # windows
 
-
-l2011 <- brick("p224r63_2011_masked.grd")
+ <- brick("p224r63_2011_masked.grd")
+ 
 
 # plotting the data in a savage manner
 plot(l2011)
@@ -88,7 +88,41 @@ par(mfrow=c(2,1))
 plotRGB(l2011, r=3, g=2, b=2, stretch="Lin")
 plotRGB(l2011, r=4, g=3, b=2, stretch="hist")
 
+#exercise: plot the NIR band
+plot(l2011[[4]])
 
+
+plotRGB(l2011, r=3, g=2, b=1, stretch="lin")
+
+plotRGB(l2011, r=4, g=3, b=2, stretch="lin")
+
+plotRGB(l2011, r=3, g=4, b=2, stretch="lin")   vegetazione rossa
+
+plotRGB(l2011, r=3, g=2, b=4, stretch="lin")  vegetazione blu
+
+#exercise: import the 1988 image
+l1988 <- brick("p224r63_1988_masked.grd")
+
+#exercise: plot in RGB space (natural colours)
+plotRGB(l1988, r=3, g=2, b=1, stretch="lin")
+plotRGB(l1988, r=4, g=3, b=2, stretch="lin")
+
+plotRGB(l1988, r=4, g=3, b=2, stretch="lin")
+
+plotRGB(l1988, 4, 3, 2, stretch="lin")  variante per scienziati pigri
+
+# multiframe 
+par(mfrow=c(2,1))    per vedere 2 immagini in 1 lez 23 marzo
+plotRGB(l1988, 4, 3, 2, stretch="lin")
+plotRGB(l2011, 4, 3, 2, stretch="lin")
+
+dev.off()
+
+par(mfrow=c(2,2))    multiubande 
+plotRGB(l1988, 4, 3, 2, stretch="lin")
+plotRGB(l2011, 4, 3, 2, stretch="lin")
+plotRGB(l1988, 4, 3, 2, stretch="hist")
+plotRGB(l2011, 4, 3, 2, stretch="hist")
 
 
 
