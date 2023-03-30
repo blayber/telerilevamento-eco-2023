@@ -127,3 +127,9 @@ plotRGB(l2011, 4, 3, 2, stretch="hist")
 
 
 
+
+
+
+l1992 <- brick("defor1_1,png")
+
+
